@@ -1,0 +1,97 @@
+pyxine
+------------------------------------------
+Python bindings for the Xine library.
+
+Runtime requirements:
+  cygwin-1.5.20-1
+  libX11_6-1.0.2-1
+  libXext6-1.0.1-1
+  python-2.4.3-1
+  pyxlib-0.12-1
+  xine-lib-1.1.1-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.20-1
+  binutils-20050610-1
+  cygport-0.2.2-1
+  gcc-core-3.4.4-1
+  python-2.4.3-1
+
+Canonical website:
+  http://pyxine.sourceforge.net/
+
+Canonical download:
+  http://prdownloads.sourceforge.net/pyxine/
+
+-------------------------------------------
+
+Build instructions:
+  unpack pyxine-0.1alpha2-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./pyxine-0.1alpha2-X.cygport all
+
+This will create:
+  /usr/src/pyxine-0.1alpha2-X-src.tar.bz2
+  /usr/src/pyxine-0.1alpha2-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/lib/python2.4/site-packages/pyxine/__init__.py
+  /usr/lib/python2.4/site-packages/pyxine/__init__.pyc
+  /usr/lib/python2.4/site-packages/pyxine/__init__.pyo
+  /usr/lib/python2.4/site-packages/pyxine/config.py
+  /usr/lib/python2.4/site-packages/pyxine/config.pyc
+  /usr/lib/python2.4/site-packages/pyxine/config.pyo
+  /usr/lib/python2.4/site-packages/pyxine/constants.py
+  /usr/lib/python2.4/site-packages/pyxine/constants.pyc
+  /usr/lib/python2.4/site-packages/pyxine/constants.pyo
+  /usr/lib/python2.4/site-packages/pyxine/constwrap.py
+  /usr/lib/python2.4/site-packages/pyxine/constwrap.pyc
+  /usr/lib/python2.4/site-packages/pyxine/constwrap.pyo
+  /usr/lib/python2.4/site-packages/pyxine/cstruct.py
+  /usr/lib/python2.4/site-packages/pyxine/cstruct.pyc
+  /usr/lib/python2.4/site-packages/pyxine/cstruct.pyo
+  /usr/lib/python2.4/site-packages/pyxine/event.py
+  /usr/lib/python2.4/site-packages/pyxine/event.pyc
+  /usr/lib/python2.4/site-packages/pyxine/event.pyo
+  /usr/lib/python2.4/site-packages/pyxine/libxine.dll
+  /usr/lib/python2.4/site-packages/pyxine/osd.py
+  /usr/lib/python2.4/site-packages/pyxine/osd.pyc
+  /usr/lib/python2.4/site-packages/pyxine/osd.pyo
+  /usr/lib/python2.4/site-packages/pyxine/post.py
+  /usr/lib/python2.4/site-packages/pyxine/post.pyc
+  /usr/lib/python2.4/site-packages/pyxine/post.pyo
+  /usr/lib/python2.4/site-packages/pyxine/pxlib.py
+  /usr/lib/python2.4/site-packages/pyxine/pxlib.pyc
+  /usr/lib/python2.4/site-packages/pyxine/pxlib.pyo
+  /usr/lib/python2.4/site-packages/pyxine/pxlibc.dll
+  /usr/lib/python2.4/site-packages/pyxine/weakmethod.py
+  /usr/lib/python2.4/site-packages/pyxine/weakmethod.pyc
+  /usr/lib/python2.4/site-packages/pyxine/weakmethod.pyo
+  /usr/lib/python2.4/site-packages/pyxine/x11.py
+  /usr/lib/python2.4/site-packages/pyxine/x11.pyc
+  /usr/lib/python2.4/site-packages/pyxine/x11.pyo
+  /usr/lib/python2.4/site-packages/pyxine/xine.py
+  /usr/lib/python2.4/site-packages/pyxine/xine.pyc
+  /usr/lib/python2.4/site-packages/pyxine/xine.pyo
+  /usr/share/doc/Cygwin/pyxine-0.1alpha2.README
+  /usr/share/doc/pyxine-0.1alpha2/ChangeLog
+  /usr/share/doc/pyxine-0.1alpha2/LICENSE
+  /usr/share/doc/pyxine-0.1alpha2/README
+  /usr/share/doc/pyxine-0.1alpha2/TODO
+
+------------------
+
+Port Notes:
+
+----- version 0.1alpha2-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
