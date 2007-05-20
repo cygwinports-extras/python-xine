@@ -1,0 +1,45 @@
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/pyxine-0.1alpha2/pxlib/XDisplay.cc src/pyxine-0.1alpha2/pxlib/XDisplay.cc
+--- origsrc/pyxine-0.1alpha2/pxlib/XDisplay.cc	2003-02-12 12:06:19.000000000 -0600
++++ src/pyxine-0.1alpha2/pxlib/XDisplay.cc	2007-05-20 00:13:55.062500000 -0500
+@@ -20,7 +20,6 @@
+  * along with this program; if not, write to the Free Software
+  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+  */
+-#pragma implementation
+ #include "XDisplay.h"
+ 
+ BEGIN_PXLIB_NAMESPACE
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/pyxine-0.1alpha2/pxlib/XDisplay.h src/pyxine-0.1alpha2/pxlib/XDisplay.h
+--- origsrc/pyxine-0.1alpha2/pxlib/XDisplay.h	2003-02-07 18:42:21.000000000 -0600
++++ src/pyxine-0.1alpha2/pxlib/XDisplay.h	2007-05-20 00:13:55.062500000 -0500
+@@ -28,6 +28,9 @@
+ 
+ extern "C" {
+ # include <unistd.h>
++# include <time.h>
++# include <string.h>
++# include <sys/select.h>
+ # include <sys/types.h>
+ # include <X11/Xlib.h>
+ # include <X11/extensions/XShm.h>
+@@ -35,8 +38,6 @@
+   extern int XShmGetEventBase(Display *);
+ }
+ 
+-#include <string>
+-
+ #include "pxlib.h"
+ #include "Geometry.h"
+ 
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/pyxine-0.1alpha2/setup.py src/pyxine-0.1alpha2/setup.py
+--- origsrc/pyxine-0.1alpha2/setup.py	2003-02-12 15:06:47.000000000 -0600
++++ src/pyxine-0.1alpha2/setup.py	2007-05-20 00:13:55.078125000 -0500
+@@ -33,7 +33,7 @@
+ 
+ libxine_src  = "pyxine/libxine_wrap.c".split(' ')
+ pxlib_src    = "pxlib/Mutex.cc pxlib/Thread.cc pxlib/XDisplay.cc pxlib/Traits.cc pxlib/Callback.cc pxlib/Geometry.cc pxlib/WindowList.cc pxlib/PxWindow.cc pxlib/pxlib_wrap.cc".split(' ')
+-xine_libs    = "xine z pthread Xext".split(' ')
++xine_libs    = "xine z pthread Xext X11".split(' ')
+ xine_libpath = "/usr/lib /usr/X11R6/lib".split(' ')
+ 
+ from distutils.core import setup, Extension

@@ -1,46 +1,47 @@
-pyxine
+python-xine
 ------------------------------------------
 Python bindings for the Xine library.
 
 Runtime requirements:
-  cygwin-1.5.20-1
-  libX11_6-1.0.2-1
-  libXext6-1.0.1-1
-  python-2.4.3-1
-  pyxlib-0.12-1
-  xine-lib-1.1.1-1
+  cygwin-1.5.24-2
+  libX11_6-1.1.1-1
+  libXext6-1.0.2-1
+  python-2.5.1-1
+  python-xlib-0.13-2
+  xine-lib-1.1.6-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.20-1
-  binutils-20050610-1
-  cygport-0.2.2-1
-  gcc-core-3.4.4-1
-  python-2.4.3-1
+  cygwin-1.5.24-2
+  binutils-20060817-1
+  cygport-0.3.1-1
+  gcc-core-3.4.4-3
+  python-2.5.1-1
 
 Canonical website:
   http://pyxine.sourceforge.net/
 
 Canonical download:
-  http://prdownloads.sourceforge.net/pyxine/
+  http://downloads.sourceforge.net/pyxine/
 
 -------------------------------------------
 
 Build instructions:
-  unpack pyxine-0.1alpha2-X-src.tar.bz2
+  unpack python-xine-0.1alpha2-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./pyxine-0.1alpha2-X.cygport all
+  cygport ./python-xine-0.1alpha2-X.cygport all
 
 This will create:
-  /usr/src/pyxine-0.1alpha2-X-src.tar.bz2
-  /usr/src/pyxine-0.1alpha2-X.tar.bz2
+  /usr/src/python-xine-0.1alpha2-X-src.tar.bz2
+  /usr/src/python-xine-0.1alpha2-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary package:
 
+  /usr/lib/python2.5/site-packages/pyxine-0.1alpha2-py2.5.egg-info
   /usr/lib/python2.4/site-packages/pyxine/__init__.py
   /usr/lib/python2.4/site-packages/pyxine/__init__.pyc
   /usr/lib/python2.4/site-packages/pyxine/__init__.pyo
@@ -79,15 +80,18 @@ Files included in the binary package:
   /usr/lib/python2.4/site-packages/pyxine/xine.py
   /usr/lib/python2.4/site-packages/pyxine/xine.pyc
   /usr/lib/python2.4/site-packages/pyxine/xine.pyo
-  /usr/share/doc/Cygwin/pyxine-0.1alpha2.README
-  /usr/share/doc/pyxine-0.1alpha2/ChangeLog
-  /usr/share/doc/pyxine-0.1alpha2/LICENSE
-  /usr/share/doc/pyxine-0.1alpha2/README
-  /usr/share/doc/pyxine-0.1alpha2/TODO
+  /usr/share/doc/Cygwin/python-xine-0.1alpha2.README
+  /usr/share/doc/python-xine-0.1alpha2/ChangeLog
+  /usr/share/doc/python-xine-0.1alpha2/LICENSE
+  /usr/share/doc/python-xine-0.1alpha2/README
+  /usr/share/doc/python-xine-0.1alpha2/TODO
 
 ------------------
 
 Port Notes:
+
+----- version 0.1alpha2-2 -----
+Rebuilt for python-2.5.
 
 ----- version 0.1alpha2-1 -----
 Initial release for Cygwin.

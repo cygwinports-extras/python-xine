@@ -1,0 +1,5 @@
+inherit distutils
+
+DESCRIPTION="Python Xine bindings"
+HOMEPAGE="http://pyxine.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${ORIG_PN}/${ORIG_PN}-${PV}.tar.gz"
