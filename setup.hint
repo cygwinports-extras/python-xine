@@ -1,4 +1,4 @@
 category: Audio Video Python
-requires: cygwin libX11_6 libXext6 python python-xlib xine-lib
+requires: libX11_6 libXext6 python python-xlib xine-lib
 sdesc: "Python bindings for the Xine library"
 ldesc: "Python bindings for the Xine library"
